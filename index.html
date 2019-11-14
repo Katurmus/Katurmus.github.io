@@ -74,11 +74,11 @@
               input = document.getElementById("myInput");
               filter = input.value.toUpperCase();
               table = document.getElementById("champions");
-              tr = table.getElementsById("id");
+              tr = table.getElementsByTagName("tr");
 
               // Loop through all table rows, and hide those who don't match the search query
               for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[1];
                 if (td) {
                   txtValue = td.textContent || td.innerText;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -119,9 +119,11 @@
        <table id= "champions">
          <tr>
             <td><img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt=""></td>
+            <td>aatrox</td>
          </tr>
          <tr>
            <td>  <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt=""> </td>
+           <td>ahri</td>
          </tr>
        </table>   
       <!--
