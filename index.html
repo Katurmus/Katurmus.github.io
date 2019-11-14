@@ -80,7 +80,8 @@
               for (i = 0; i < tr.length; i++) {
                 td = tr[i].attr('id');
                 if (td) {
-                  txtValue = td.textContent || td.innerText;
+                  alert('td');
+                  txtValue = td;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
                   } else {
