@@ -78,7 +78,7 @@
 
               // Loop through all table rows, and hide those who don't match the search query
               for (i = 0; i < tr.length; i++) {
-                td = tr[i].alt;
+                td = tr[i].getAttribute("alt");
                 alert(td);
                 if (td) {
                   //alert(td);
