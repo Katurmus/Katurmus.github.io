@@ -4,7 +4,7 @@
     <title>Katurmus Drafting Project</title>
     <style>
             #ban1 {
-                position: absolute;
+              position: absolute;
               top: 100px;
               left: 100px;
               width: 120px;
@@ -13,7 +13,7 @@
               border: 3px solid #aaaaaa;
             }
             #ban2 {
-                position: absolute;
+              position: absolute;
               top: 100px;
               left: 220px;
               width: 120px;
@@ -22,7 +22,7 @@
               border: 3px solid #aaaaaa;
             }
             #ban3 {
-                position: absolute;
+              position: absolute;
               top: 100px;
               left: 340px;
               width: 120px;
@@ -31,7 +31,7 @@
               border: 3px solid #aaaaaa;
             }
             #ban4 {
-                position: absolute;
+              position: absolute;
               top: 100px;
               left: 460px;
               width: 120px;
@@ -40,7 +40,7 @@
               border: 3px solid #aaaaaa;
             }
             #ban5 {
-                position: absolute;
+              position: absolute;
               top: 100px;
               left: 580px;
               width: 120px;
@@ -54,8 +54,40 @@
               padding: 0px;
               border: 3px solid #aaaaaa;
             }
+            #myInput {
+              background-image: url('/css/searchicon.png');
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              width: 100%;
+              font-size: 16px;
+              padding: 12px 20px 12px 40px;
+              border: 1px solid #ddd;
+              margin-bottom: 12px;
+            }
+
     </style>
     <script>
+            function search() {
+              // Declare variables
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
             function clicked(){
                 
             }
@@ -77,150 +109,153 @@
     </script>
 
 </head>
-<body>
+  <body>
         <div id="ban1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="ban2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="ban3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="ban4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="ban5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
-                <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="">
-<img id ="Akali" draggable="true" ondragstart="drag(event)" src="Champions/AkaliSquare.png" alt="">
-<img id ="1" draggable="true" ondragstart="drag(event)" src="Champions/AlistarSquare.png" alt="">
-<img id ="2" draggable="true" ondragstart="drag(event)" src="Champions/AmumuSquare.png" alt="">
-<img id ="3" draggable="true" ondragstart="drag(event)" src="Champions/AniviaSquare.png" alt="">
-<img id ="4" draggable="true" ondragstart="drag(event)" src="Champions/AnnieSquare.png" alt="">
-<img id ="5" draggable="true" ondragstart="drag(event)" src="Champions/AsheSquare.png" alt="">
-<img id ="6" draggable="true" ondragstart="drag(event)" src="Champions/AurelionSquare.png" alt="">
-<img id ="7" draggable="true" ondragstart="drag(event)" src="Champions/AzirSquare.png" alt="">
-<img id ="8" draggable="true" ondragstart="drag(event)" src="Champions/BardSquare.png" alt="">
-<img id ="9" draggable="true" ondragstart="drag(event)" src="Champions/BlitzcrankSquare.png" alt="">
-<img id ="10" draggable="true" ondragstart="drag(event)" src="Champions/BraumSquare.png" alt="">
-<img id ="11" draggable="true" ondragstart="drag(event)" src="Champions/BrandSquare.png" alt="">
-<img id ="12" draggable="true" ondragstart="drag(event)" src="Champions/CaitlynSquare.png" alt="">
-<img id ="14" draggable="true" ondragstart="drag(event)" src="Champions/CamilleSquare.png" alt="">
-<img id ="15" draggable="true" ondragstart="drag(event)" src="Champions/CassopeiaSquare.png" alt="">
-<img id ="16" draggable="true" ondragstart="drag(event)" src="Champions/ChoGathSquare.png" alt="">
-<img id ="17" draggable="true" ondragstart="drag(event)" src="Champions/CorkiSquare.png" alt="">
-<img id ="18" draggable="true" ondragstart="drag(event)" src="Champions/DariusSquare.png" alt="">
-<img id ="13" draggable="true" ondragstart="drag(event)" src="Champions/DianaSquare.png" alt="">
-<img id ="19" draggable="true" ondragstart="drag(event)" src="Champions/DravenSquare.png" alt="">
-<img id ="20" draggable="true" ondragstart="drag(event)" src="Champions/DrMundoSquare.png" alt="">
-<img id ="21" draggable="true" ondragstart="drag(event)" src="Champions/EkkoSquare.png" alt="">
-<img id ="22" draggable="true" ondragstart="drag(event)" src="Champions/EliseSquare.png" alt="">
-<img id ="23" draggable="true" ondragstart="drag(event)" src="Champions/EvelynnSquare.png" alt="">
-<img id ="24" draggable="true" ondragstart="drag(event)" src="Champions/EzrealSquare.png" alt="">
-<img id ="25" draggable="true" ondragstart="drag(event)" src="Champions/FiddlesticksSquare.png" alt="">
-<img id ="26" draggable="true" ondragstart="drag(event)" src="Champions/FioraSquare.png" alt="">
-<img id ="27" draggable="true" ondragstart="drag(event)" src="Champions/FizzSquare.png" alt="">
-<img id ="28" draggable="true" ondragstart="drag(event)" src="Champions/GalioSquare.png" alt="">
-<img id ="29" draggable="true" ondragstart="drag(event)" src="Champions/GangplankSquare.png" alt="">
-<img id ="30" draggable="true" ondragstart="drag(event)" src="Champions/GarenSquare.png" alt="">
-<img id ="31" draggable="true" ondragstart="drag(event)" src="Champions/GnarSquare.png" alt="">
-<img id ="32" draggable="true" ondragstart="drag(event)" src="Champions/GragasSquare.png" alt="">
-<img id ="33" draggable="true" ondragstart="drag(event)" src="Champions/GravesSquare.png" alt="">
-<img id ="34" draggable="true" ondragstart="drag(event)" src="Champions/HecarimSquare.png" alt="">
-<img id ="35" draggable="true" ondragstart="drag(event)" src="Champions/HeimerdingerSquare.png" alt="">
-<img id ="36" draggable="true" ondragstart="drag(event)" src="Champions/IllaoiSquare.png" alt="">
-<img id ="37" draggable="true" ondragstart="drag(event)" src="Champions/IreliaSquare.png" alt="">
-<img id ="38" draggable="true" ondragstart="drag(event)" src="Champions/IvernSquare.png" alt="">
-<img id ="39" draggable="true" ondragstart="drag(event)" src="Champions/JannaSquare.png" alt="">
-<img id ="40" draggable="true" ondragstart="drag(event)" src="Champions/JarvanIVSquare.png" alt="">
-<img id ="41" draggable="true" ondragstart="drag(event)" src="Champions/JaxSquare.png" alt="">
-<img id ="42" draggable="true" ondragstart="drag(event)" src="Champions/JayceSquare.png" alt="">
-<img id ="43" draggable="true" ondragstart="drag(event)" src="Champions/JhinSquare.png" alt="">
-<img id ="44" draggable="true" ondragstart="drag(event)" src="Champions/JinxSquare.png" alt="">
-<img id ="45" draggable="true" ondragstart="drag(event)" src="Champions/Kai'SaSquare.png" alt="">
-<img id ="46" draggable="true" ondragstart="drag(event)" src="Champions/KalistaSquare.png" alt="">
-<img id ="47" draggable="true" ondragstart="drag(event)" src="Champions/KarmaSquare.png" alt="">
-<img id ="48" draggable="true" ondragstart="drag(event)" src="Champions/KarthusSquare.png" alt="">
-<img id ="49" draggable="true" ondragstart="drag(event)" src="Champions/KassadinSquare.png" alt="">
-<img id ="50" draggable="true" ondragstart="drag(event)" src="Champions/KayleSquare.png" alt="">
-<img id ="51" draggable="true" ondragstart="drag(event)" src="Champions/KaynSquare.png" alt="">
-<img id ="52" draggable="true" ondragstart="drag(event)" src="Champions/KennenSquare.png" alt="">
-<img id ="53" draggable="true" ondragstart="drag(event)" src="Champions/Kha'ZixSquare.png" alt="">
-<img id ="54" draggable="true" ondragstart="drag(event)" src="Champions/KindredSquare.png" alt="">
-<img id ="55" draggable="true" ondragstart="drag(event)" src="Champions/KledSquare.png" alt="">
-<img id ="56" draggable="true" ondragstart="drag(event)" src="Champions/Kog'MawSquare.png" alt="">
-<img id ="57" draggable="true" ondragstart="drag(event)" src="Champions/LeBlancSquare.png" alt="">
-<img id ="58" draggable="true" ondragstart="drag(event)" src="Champions/Lee_SinSquare.png" alt="">
-<img id ="59" draggable="true" ondragstart="drag(event)" src="Champions/LeonaSquare.png" alt="">
-<img id ="60" draggable="true" ondragstart="drag(event)" src="Champions/LissandraSquare.png" alt="">
-<img id ="61" draggable="true" ondragstart="drag(event)" src="Champions/LucianSquare.png" alt="">
-<img id ="62" draggable="true" ondragstart="drag(event)" src="Champions/LuluSquare.png" alt="">
-<img id ="63" draggable="true" ondragstart="drag(event)" src="Champions/LuxSquare.png" alt="">
-<img id ="64" draggable="true" ondragstart="drag(event)" src="Champions/MalphiteSquare.png" alt="">
-<img id ="65" draggable="true" ondragstart="drag(event)" src="Champions/MalzaharSquare.png" alt="">
-<img id ="66" draggable="true" ondragstart="drag(event)" src="Champions/MaokaiSquare.png" alt="">
-<img id ="67" draggable="true" ondragstart="drag(event)" src="Champions/Master_YiSquare.png" alt="">
-<img id ="68" draggable="true" ondragstart="drag(event)" src="Champions/MissFortuneSquare.png" alt="">
-<img id ="69" draggable="true" ondragstart="drag(event)" src="Champions/MorganaSquare.png" alt="">
-<img id ="70" draggable="true" ondragstart="drag(event)" src="Champions/NamiSquare.png" alt="">
-<img id ="71" draggable="true" ondragstart="drag(event)" src="Champions/NasusSquare.png" alt="">
-<img id ="72" draggable="true" ondragstart="drag(event)" src="Champions/NautilusSquare.png" alt="">
-<img id ="73" draggable="true" ondragstart="drag(event)" src="Champions/NeekoSquare.png" alt="">
-<img id ="74" draggable="true" ondragstart="drag(event)" src="Champions/NidaleeSquare.png" alt="">
-<img id ="75" draggable="true" ondragstart="drag(event)" src="Champions/NocturneSquare.png" alt="">
-<img id ="76" draggable="true" ondragstart="drag(event)" src="Champions/Nunu_&_WillumpSquare.png" alt="">
-<img id ="77" draggable="true" ondragstart="drag(event)" src="Champions/OlafSquare.png" alt="">
-<img id ="78" draggable="true" ondragstart="drag(event)" src="Champions/OriannaSquare.png" alt="">
-<img id ="79" draggable="true" ondragstart="drag(event)" src="Champions/PantheonSquare.png" alt="">
-<img id ="80" draggable="true" ondragstart="drag(event)" src="Champions/PoppySquare.png" alt="">
-<img id ="81" draggable="true" ondragstart="drag(event)" src="Champions/PykeSquare.png" alt="">
-<img id ="82" draggable="true" ondragstart="drag(event)" src="Champions/QiyanaSquare.png" alt="">
-<img id ="83" draggable="true" ondragstart="drag(event)" src="Champions/QuinnSquare.png" alt="">
-<img id ="84" draggable="true" ondragstart="drag(event)" src="Champions/RakanSquare.png" alt="">
-<img id ="85" draggable="true" ondragstart="drag(event)" src="Champions/RammusSquare.png" alt="">
-<img id ="86" draggable="true" ondragstart="drag(event)" src="Champions/Rek'SaiSquare.png" alt="">
-<img id ="87" draggable="true" ondragstart="drag(event)" src="Champions/RenektonSquare.png" alt="">
-<img id ="88" draggable="true" ondragstart="drag(event)" src="Champions/RengarSquare.png" alt="">
-<img id ="89" draggable="true" ondragstart="drag(event)" src="Champions/RivenSquare.png" alt="">
-<img id ="90" draggable="true" ondragstart="drag(event)" src="Champions/RumbleSquare.png" alt="">
-<img id ="91" draggable="true" ondragstart="drag(event)" src="Champions/RyzeSquare.png" alt="">
-<img id ="92" draggable="true" ondragstart="drag(event)" src="Champions/SejuaniSquare.png" alt="">
-<img id ="93" draggable="true" ondragstart="drag(event)" src="Champions/ShacoSquare.png" alt="">
-<img id ="94" draggable="true" ondragstart="drag(event)" src="Champions/ShenSquare.png" alt="">
-<img id ="95" draggable="true" ondragstart="drag(event)" src="Champions/ShyvanaSquare.png" alt="">
-<img id ="96" draggable="true" ondragstart="drag(event)" src="Champions/SingedSquare.png" alt="">
-<img id ="97" draggable="true" ondragstart="drag(event)" src="Champions/SionSquare.png" alt="">
-<img id ="98" draggable="true" ondragstart="drag(event)" src="Champions/SivirSquare.png" alt="">
-<img id ="99" draggable="true" ondragstart="drag(event)" src="Champions/SkarnerSquare.png" alt="">
-<img id ="100" draggable="true" ondragstart="drag(event)" src="Champions/SonaSquare.png" alt="">
-<img id ="101" draggable="true" ondragstart="drag(event)" src="Champions/SorakaSquare.png" alt="">
-<img id ="102" draggable="true" ondragstart="drag(event)" src="Champions/SwainSquare.png" alt="">
-<img id ="103" draggable="true" ondragstart="drag(event)" src="Champions/SylasSquare.png" alt="">
-<img id ="104" draggable="true" ondragstart="drag(event)" src="Champions/SyndraSquare.png" alt="">
-<img id ="105" draggable="true" ondragstart="drag(event)" src="Champions/Tahm_KenchSquare.png" alt="">
-<img id ="106" draggable="true" ondragstart="drag(event)" src="Champions/TaliyahSquare.png" alt="">
-<img id ="107" draggable="true" ondragstart="drag(event)" src="Champions/TalonSquare.png" alt="">
-<img id ="108" draggable="true" ondragstart="drag(event)" src="Champions/TaricSquare.png" alt="">
-<img id ="109" draggable="true" ondragstart="drag(event)" src="Champions/TeemoSquare.png" alt="">
-<img id ="110" draggable="true" ondragstart="drag(event)" src="Champions/ThreshSquare.png" alt="">
-<img id ="111" draggable="true" ondragstart="drag(event)" src="Champions/TristanaSquare.png" alt="">
-<img id ="112" draggable="true" ondragstart="drag(event)" src="Champions/TrundleSquare.png" alt="">
-<img id ="113" draggable="true" ondragstart="drag(event)" src="Champions/TryndamereSquare.png" alt="">
-<img id ="114" draggable="true" ondragstart="drag(event)" src="Champions/Twisted_FateSquare.png" alt="">
-<img id ="115" draggable="true" ondragstart="drag(event)" src="Champions/TwitchSquare.png" alt="">
-<img id ="116" draggable="true" ondragstart="drag(event)" src="Champions/UdyrSquare.png" alt="">
-<img id ="117" draggable="true" ondragstart="drag(event)" src="Champions/UrgotSquare.png" alt="">
-<img id ="118" draggable="true" ondragstart="drag(event)" src="Champions/VarusSquare.png" alt="">
-<img id ="119" draggable="true" ondragstart="drag(event)" src="Champions/VayneSquare.png" alt="">
-<img id ="120" draggable="true" ondragstart="drag(event)" src="Champions/VeigarSquare.png" alt="">
-<img id ="121" draggable="true" ondragstart="drag(event)" src="Champions/Vel'KozSquare.png" alt="">
-<img id ="122" draggable="true" ondragstart="drag(event)" src="Champions/ViktorSquare.png" alt="">
-<img id ="123" draggable="true" ondragstart="drag(event)" src="Champions/ViSquare.png" alt="">
-<img id ="124" draggable="true" ondragstart="drag(event)" src="Champions/VladimirSquare.png" alt="">
-<img id ="125" draggable="true" ondragstart="drag(event)" src="Champions/VolibearSquare.png" alt="">
-<img id ="126" draggable="true" ondragstart="drag(event)" src="Champions/WarwickSquare.png" alt="">
-<img id ="127" draggable="true" ondragstart="drag(event)" src="Champions/WukongSquare.png" alt="">
-<img id ="128" draggable="true" ondragstart="drag(event)" src="Champions/XayahSquare.png" alt="">
-<img id ="129" draggable="true" ondragstart="drag(event)" src="Champions/XerathSquare.png" alt="">
-<img id ="130" draggable="true" ondragstart="drag(event)" src="Champions/Xin_ZhaoSquare.png" alt="">
-<img id ="131" draggable="true" ondragstart="drag(event)" src="Champions/YasuoSquare.png" alt="">
-<img id ="132" draggable="true" ondragstart="drag(event)" src="Champions/YorickSquare.png" alt="">
-<img id ="133" draggable="true" ondragstart="drag(event)" src="Champions/YuumiSquare.png" alt="">
-<img id ="134" draggable="true" ondragstart="drag(event)" src="Champions/ZacSquare.png" alt="">
-        </div>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
+        <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="">
+        <img id ="Akali" draggable="true" ondragstart="drag(event)" src="Champions/AkaliSquare.png" alt="">
+        <img id ="Alistar" draggable="true" ondragstart="drag(event)" src="Champions/AlistarSquare.png" alt="">
+        <img id ="2" draggable="true" ondragstart="drag(event)" src="Champions/AmumuSquare.png" alt="">
+        <img id ="3" draggable="true" ondragstart="drag(event)" src="Champions/AniviaSquare.png" alt="">
+        <img id ="4" draggable="true" ondragstart="drag(event)" src="Champions/AnnieSquare.png" alt="">
+        <img id ="5" draggable="true" ondragstart="drag(event)" src="Champions/AsheSquare.png" alt="">
+        <img id ="6" draggable="true" ondragstart="drag(event)" src="Champions/AurelionSquare.png" alt="">
+        <img id ="7" draggable="true" ondragstart="drag(event)" src="Champions/AzirSquare.png" alt="">
+        <img id ="8" draggable="true" ondragstart="drag(event)" src="Champions/BardSquare.png" alt="">
+        <img id ="9" draggable="true" ondragstart="drag(event)" src="Champions/BlitzcrankSquare.png" alt="">
+        <img id ="10" draggable="true" ondragstart="drag(event)" src="Champions/BraumSquare.png" alt="">
+        <img id ="11" draggable="true" ondragstart="drag(event)" src="Champions/BrandSquare.png" alt="">
+        <img id ="12" draggable="true" ondragstart="drag(event)" src="Champions/CaitlynSquare.png" alt="">
+        <img id ="14" draggable="true" ondragstart="drag(event)" src="Champions/CamilleSquare.png" alt="">
+        <img id ="15" draggable="true" ondragstart="drag(event)" src="Champions/CassopeiaSquare.png" alt="">
+        <img id ="16" draggable="true" ondragstart="drag(event)" src="Champions/ChoGathSquare.png" alt="">
+        <img id ="17" draggable="true" ondragstart="drag(event)" src="Champions/CorkiSquare.png" alt="">
+        <img id ="18" draggable="true" ondragstart="drag(event)" src="Champions/DariusSquare.png" alt="">
+        <img id ="13" draggable="true" ondragstart="drag(event)" src="Champions/DianaSquare.png" alt="">
+        <img id ="19" draggable="true" ondragstart="drag(event)" src="Champions/DravenSquare.png" alt="">
+        <img id ="20" draggable="true" ondragstart="drag(event)" src="Champions/DrMundoSquare.png" alt="">
+        <img id ="21" draggable="true" ondragstart="drag(event)" src="Champions/EkkoSquare.png" alt="">
+        <img id ="22" draggable="true" ondragstart="drag(event)" src="Champions/EliseSquare.png" alt="">
+        <img id ="23" draggable="true" ondragstart="drag(event)" src="Champions/EvelynnSquare.png" alt="">
+        <img id ="24" draggable="true" ondragstart="drag(event)" src="Champions/EzrealSquare.png" alt="">
+        <img id ="25" draggable="true" ondragstart="drag(event)" src="Champions/FiddlesticksSquare.png" alt="">
+        <img id ="26" draggable="true" ondragstart="drag(event)" src="Champions/FioraSquare.png" alt="">
+        <img id ="27" draggable="true" ondragstart="drag(event)" src="Champions/FizzSquare.png" alt="">
+        <img id ="28" draggable="true" ondragstart="drag(event)" src="Champions/GalioSquare.png" alt="">
+        <img id ="29" draggable="true" ondragstart="drag(event)" src="Champions/GangplankSquare.png" alt="">
+        <img id ="30" draggable="true" ondragstart="drag(event)" src="Champions/GarenSquare.png" alt="">
+        <img id ="31" draggable="true" ondragstart="drag(event)" src="Champions/GnarSquare.png" alt="">
+        <img id ="32" draggable="true" ondragstart="drag(event)" src="Champions/GragasSquare.png" alt="">
+        <img id ="33" draggable="true" ondragstart="drag(event)" src="Champions/GravesSquare.png" alt="">
+        <img id ="34" draggable="true" ondragstart="drag(event)" src="Champions/HecarimSquare.png" alt="">
+        <img id ="35" draggable="true" ondragstart="drag(event)" src="Champions/HeimerdingerSquare.png" alt="">
+        <img id ="36" draggable="true" ondragstart="drag(event)" src="Champions/IllaoiSquare.png" alt="">
+        <img id ="37" draggable="true" ondragstart="drag(event)" src="Champions/IreliaSquare.png" alt="">
+        <img id ="38" draggable="true" ondragstart="drag(event)" src="Champions/IvernSquare.png" alt="">
+        <img id ="39" draggable="true" ondragstart="drag(event)" src="Champions/JannaSquare.png" alt="">
+        <img id ="40" draggable="true" ondragstart="drag(event)" src="Champions/JarvanIVSquare.png" alt="">
+        <img id ="41" draggable="true" ondragstart="drag(event)" src="Champions/JaxSquare.png" alt="">
+        <img id ="42" draggable="true" ondragstart="drag(event)" src="Champions/JayceSquare.png" alt="">
+        <img id ="43" draggable="true" ondragstart="drag(event)" src="Champions/JhinSquare.png" alt="">
+        <img id ="44" draggable="true" ondragstart="drag(event)" src="Champions/JinxSquare.png" alt="">
+        <img id ="45" draggable="true" ondragstart="drag(event)" src="Champions/Kai'SaSquare.png" alt="">
+        <img id ="46" draggable="true" ondragstart="drag(event)" src="Champions/KalistaSquare.png" alt="">
+        <img id ="47" draggable="true" ondragstart="drag(event)" src="Champions/KarmaSquare.png" alt="">
+        <img id ="48" draggable="true" ondragstart="drag(event)" src="Champions/KarthusSquare.png" alt="">
+        <img id ="49" draggable="true" ondragstart="drag(event)" src="Champions/KassadinSquare.png" alt="">
+        <img id ="50" draggable="true" ondragstart="drag(event)" src="Champions/KayleSquare.png" alt="">
+        <img id ="51" draggable="true" ondragstart="drag(event)" src="Champions/KaynSquare.png" alt="">
+        <img id ="52" draggable="true" ondragstart="drag(event)" src="Champions/KennenSquare.png" alt="">
+        <img id ="53" draggable="true" ondragstart="drag(event)" src="Champions/Kha'ZixSquare.png" alt="">
+        <img id ="54" draggable="true" ondragstart="drag(event)" src="Champions/KindredSquare.png" alt="">
+        <img id ="55" draggable="true" ondragstart="drag(event)" src="Champions/KledSquare.png" alt="">
+        <img id ="56" draggable="true" ondragstart="drag(event)" src="Champions/Kog'MawSquare.png" alt="">
+        <img id ="57" draggable="true" ondragstart="drag(event)" src="Champions/LeBlancSquare.png" alt="">
+        <img id ="58" draggable="true" ondragstart="drag(event)" src="Champions/Lee_SinSquare.png" alt="">
+        <img id ="59" draggable="true" ondragstart="drag(event)" src="Champions/LeonaSquare.png" alt="">
+        <img id ="60" draggable="true" ondragstart="drag(event)" src="Champions/LissandraSquare.png" alt="">
+        <img id ="61" draggable="true" ondragstart="drag(event)" src="Champions/LucianSquare.png" alt="">
+        <img id ="62" draggable="true" ondragstart="drag(event)" src="Champions/LuluSquare.png" alt="">
+        <img id ="63" draggable="true" ondragstart="drag(event)" src="Champions/LuxSquare.png" alt="">
+        <img id ="64" draggable="true" ondragstart="drag(event)" src="Champions/MalphiteSquare.png" alt="">
+        <img id ="65" draggable="true" ondragstart="drag(event)" src="Champions/MalzaharSquare.png" alt="">
+        <img id ="66" draggable="true" ondragstart="drag(event)" src="Champions/MaokaiSquare.png" alt="">
+        <img id ="67" draggable="true" ondragstart="drag(event)" src="Champions/Master_YiSquare.png" alt="">
+        <img id ="68" draggable="true" ondragstart="drag(event)" src="Champions/MissFortuneSquare.png" alt="">
+        <img id ="69" draggable="true" ondragstart="drag(event)" src="Champions/MorganaSquare.png" alt="">
+        <img id ="70" draggable="true" ondragstart="drag(event)" src="Champions/NamiSquare.png" alt="">
+        <img id ="71" draggable="true" ondragstart="drag(event)" src="Champions/NasusSquare.png" alt="">
+        <img id ="72" draggable="true" ondragstart="drag(event)" src="Champions/NautilusSquare.png" alt="">
+        <img id ="73" draggable="true" ondragstart="drag(event)" src="Champions/NeekoSquare.png" alt="">
+        <img id ="74" draggable="true" ondragstart="drag(event)" src="Champions/NidaleeSquare.png" alt="">
+        <img id ="75" draggable="true" ondragstart="drag(event)" src="Champions/NocturneSquare.png" alt="">
+        <img id ="76" draggable="true" ondragstart="drag(event)" src="Champions/Nunu_&_WillumpSquare.png" alt="">
+        <img id ="77" draggable="true" ondragstart="drag(event)" src="Champions/OlafSquare.png" alt="">
+        <img id ="78" draggable="true" ondragstart="drag(event)" src="Champions/OriannaSquare.png" alt="">
+        <img id ="79" draggable="true" ondragstart="drag(event)" src="Champions/PantheonSquare.png" alt="">
+        <img id ="80" draggable="true" ondragstart="drag(event)" src="Champions/PoppySquare.png" alt="">
+        <img id ="81" draggable="true" ondragstart="drag(event)" src="Champions/PykeSquare.png" alt="">
+        <img id ="82" draggable="true" ondragstart="drag(event)" src="Champions/QiyanaSquare.png" alt="">
+        <img id ="83" draggable="true" ondragstart="drag(event)" src="Champions/QuinnSquare.png" alt="">
+        <img id ="84" draggable="true" ondragstart="drag(event)" src="Champions/RakanSquare.png" alt="">
+        <img id ="85" draggable="true" ondragstart="drag(event)" src="Champions/RammusSquare.png" alt="">
+        <img id ="86" draggable="true" ondragstart="drag(event)" src="Champions/Rek'SaiSquare.png" alt="">
+        <img id ="87" draggable="true" ondragstart="drag(event)" src="Champions/RenektonSquare.png" alt="">
+        <img id ="88" draggable="true" ondragstart="drag(event)" src="Champions/RengarSquare.png" alt="">
+        <img id ="89" draggable="true" ondragstart="drag(event)" src="Champions/RivenSquare.png" alt="">
+        <img id ="90" draggable="true" ondragstart="drag(event)" src="Champions/RumbleSquare.png" alt="">
+        <img id ="91" draggable="true" ondragstart="drag(event)" src="Champions/RyzeSquare.png" alt="">
+        <img id ="92" draggable="true" ondragstart="drag(event)" src="Champions/SejuaniSquare.png" alt="">
+        <img id ="93" draggable="true" ondragstart="drag(event)" src="Champions/ShacoSquare.png" alt="">
+        <img id ="94" draggable="true" ondragstart="drag(event)" src="Champions/ShenSquare.png" alt="">
+        <img id ="95" draggable="true" ondragstart="drag(event)" src="Champions/ShyvanaSquare.png" alt="">
+        <img id ="96" draggable="true" ondragstart="drag(event)" src="Champions/SingedSquare.png" alt="">
+        <img id ="97" draggable="true" ondragstart="drag(event)" src="Champions/SionSquare.png" alt="">
+        <img id ="98" draggable="true" ondragstart="drag(event)" src="Champions/SivirSquare.png" alt="">
+        <img id ="99" draggable="true" ondragstart="drag(event)" src="Champions/SkarnerSquare.png" alt="">
+        <img id ="100" draggable="true" ondragstart="drag(event)" src="Champions/SonaSquare.png" alt="">
+        <img id ="101" draggable="true" ondragstart="drag(event)" src="Champions/SorakaSquare.png" alt="">
+        <img id ="102" draggable="true" ondragstart="drag(event)" src="Champions/SwainSquare.png" alt="">
+        <img id ="103" draggable="true" ondragstart="drag(event)" src="Champions/SylasSquare.png" alt="">
+        <img id ="104" draggable="true" ondragstart="drag(event)" src="Champions/SyndraSquare.png" alt="">
+        <img id ="105" draggable="true" ondragstart="drag(event)" src="Champions/Tahm_KenchSquare.png" alt="">
+        <img id ="106" draggable="true" ondragstart="drag(event)" src="Champions/TaliyahSquare.png" alt="">
+        <img id ="107" draggable="true" ondragstart="drag(event)" src="Champions/TalonSquare.png" alt="">
+        <img id ="108" draggable="true" ondragstart="drag(event)" src="Champions/TaricSquare.png" alt="">
+        <img id ="109" draggable="true" ondragstart="drag(event)" src="Champions/TeemoSquare.png" alt="">
+        <img id ="110" draggable="true" ondragstart="drag(event)" src="Champions/ThreshSquare.png" alt="">
+        <img id ="111" draggable="true" ondragstart="drag(event)" src="Champions/TristanaSquare.png" alt="">
+        <img id ="112" draggable="true" ondragstart="drag(event)" src="Champions/TrundleSquare.png" alt="">
+        <img id ="113" draggable="true" ondragstart="drag(event)" src="Champions/TryndamereSquare.png" alt="">
+        <img id ="114" draggable="true" ondragstart="drag(event)" src="Champions/Twisted_FateSquare.png" alt="">
+        <img id ="115" draggable="true" ondragstart="drag(event)" src="Champions/TwitchSquare.png" alt="">
+        <img id ="116" draggable="true" ondragstart="drag(event)" src="Champions/UdyrSquare.png" alt="">
+        <img id ="117" draggable="true" ondragstart="drag(event)" src="Champions/UrgotSquare.png" alt="">
+        <img id ="118" draggable="true" ondragstart="drag(event)" src="Champions/VarusSquare.png" alt="">
+        <img id ="119" draggable="true" ondragstart="drag(event)" src="Champions/VayneSquare.png" alt="">
+        <img id ="120" draggable="true" ondragstart="drag(event)" src="Champions/VeigarSquare.png" alt="">
+        <img id ="121" draggable="true" ondragstart="drag(event)" src="Champions/Vel'KozSquare.png" alt="">
+        <img id ="122" draggable="true" ondragstart="drag(event)" src="Champions/ViktorSquare.png" alt="">
+        <img id ="123" draggable="true" ondragstart="drag(event)" src="Champions/ViSquare.png" alt="">
+        <img id ="124" draggable="true" ondragstart="drag(event)" src="Champions/VladimirSquare.png" alt="">
+        <img id ="125" draggable="true" ondragstart="drag(event)" src="Champions/VolibearSquare.png" alt="">
+        <img id ="126" draggable="true" ondragstart="drag(event)" src="Champions/WarwickSquare.png" alt="">
+        <img id ="127" draggable="true" ondragstart="drag(event)" src="Champions/WukongSquare.png" alt="">
+        <img id ="128" draggable="true" ondragstart="drag(event)" src="Champions/XayahSquare.png" alt="">
+        <img id ="129" draggable="true" ondragstart="drag(event)" src="Champions/XerathSquare.png" alt="">
+        <img id ="130" draggable="true" ondragstart="drag(event)" src="Champions/Xin_ZhaoSquare.png" alt="">
+        <img id ="131" draggable="true" ondragstart="drag(event)" src="Champions/YasuoSquare.png" alt="">
+        <img id ="132" draggable="true" ondragstart="drag(event)" src="Champions/YorickSquare.png" alt="">
+        <img id ="133" draggable="true" ondragstart="drag(event)" src="Champions/YuumiSquare.png" alt="">
+        <img id ="134" draggable="true" ondragstart="drag(event)" src="Champions/ZacSquare.png" alt="">
+      </div>
 </body>
 </html>
