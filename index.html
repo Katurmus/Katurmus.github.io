@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Katurmus Drafting Project</title>
-    <style type ="test/css"> 
+    <title>Katurmus Drafting Project</title>
+    <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+            }
+    </script>
 
-        *
-        {
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        .dragzone,.dropzone
-        {
-            height: 400px;
-            width: 40%;
-            border:10px solid black;
-        }
-    </style>
 </head>
 <body>
 
+    <img id ="Aatrox" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
 
-
-<div class ="dragzone">
- 
-</div>
-<div class = "dropzone">
-
-</div>
 
 </body>
 </html>
