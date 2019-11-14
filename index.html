@@ -56,6 +56,9 @@
             }
     </style>
     <script>
+            function clicked(){
+                
+            }
             function allowDrop(ev) {
               ev.preventDefault();
             }
@@ -81,7 +84,7 @@
         <div id="ban4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="ban5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img id ="Aatrox" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
+                <img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
                 <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="">
 <img id ="Akali" draggable="true" ondragstart="drag(event)" src="Champions/AkaliSquare.png" alt="">
 <img id ="1" draggable="true" ondragstart="drag(event)" src="Champions/AlistarSquare.png" alt="">
