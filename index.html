@@ -78,7 +78,7 @@
 
               // Loop through all table rows, and hide those who don't match the search query
               for (i = 0; i < tr.length; i++) {
-                td = tr[i].find('img').attr('id');
+                td = tr[i].id;
                 if (td) {
                   alert('td');
                   txtValue = td;
@@ -119,10 +119,10 @@
         <input type="text" id="myInput" onkeyup="search()" placeholder="Search for Champions.." title="Type in a name">
        <table id= "champions">
          <tr>
-            <td><img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt=""></td>
+            <td id = "Aatrox"><img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt=""></td>
          </tr>
          <tr>
-           <td><img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt=""> </td>
+           <td id = "Ahri"><img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt=""> </td>
          </tr>
        </table>   
       <!--
