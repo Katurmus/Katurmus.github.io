@@ -73,8 +73,8 @@
               var input, filter, table, tr, td, i, txtValue;
               input = document.getElementById("myInput");
               filter = input.value.toUpperCase();
-              table = document.getElementById("myTable");
-              tr = table.getElementsByTagName("tr");
+              table = document.getElementById("champions");
+              tr = table.getElementsById("id");
 
               // Loop through all table rows, and hide those who don't match the search query
               for (i = 0; i < tr.length; i++) {
@@ -88,9 +88,6 @@
                   }
                 }
               }
-            }
-            function clicked(){
-                
             }
             function allowDrop(ev) {
               ev.preventDefault();
@@ -119,9 +116,15 @@
         <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
 
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-        <img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
-        <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="">
+       <table id= "champions">
+         <tr>
+            <td><img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt=""></td>
+         </tr>
+         <tr>
+           <td>  <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt=""> </td>
+         </tr>
+       </table>   
+      
         <img id ="Akali" draggable="true" ondragstart="drag(event)" src="Champions/AkaliSquare.png" alt="">
         <img id ="Alistar" draggable="true" ondragstart="drag(event)" src="Champions/AlistarSquare.png" alt="">
         <img id ="2" draggable="true" ondragstart="drag(event)" src="Champions/AmumuSquare.png" alt="">
