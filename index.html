@@ -78,10 +78,10 @@
 
               // Loop through all table rows, and hide those who don't match the search query
               for (i = 0; i < tr.length; i++) {
-                td = tr[i].getAttribute('id');
+                td = tr[i].alt;
                 alert(td);
                 if (td) {
-                  alert(td);
+                  //alert(td);
                   txtValue = td;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
@@ -120,10 +120,10 @@
         <input type="text" id="myInput" onkeyup="search()" placeholder="Search for Champions.." title="Type in a name">
        <table id= "champions">
          <tr>
-            <td id = "Aatrox"><img id ="Aatrox" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt=""></td>
+            <td ><img id ="1" onclick="clicked()" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="Aatrox"></td>
          </tr>
          <tr>
-           <td id = "Ahri"><img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt=""> </td>
+           <td ><img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="Ahri"> </td>
          </tr>
        </table>   
       <!--
