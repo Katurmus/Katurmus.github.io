@@ -9,6 +9,12 @@
               padding: 0px;
               border: 3px solid #aaaaaa;
             }
+            #div2 {
+              width: 400px;
+              height: 400px;
+              padding: 0px;
+              border: 3px solid #aaaaaa;
+            }
     </style>
     <script>
             function allowDrop(ev) {
@@ -20,6 +26,7 @@
             }
             
             function drop(ev) {
+            
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
               ev.target.appendChild(document.getElementById(data));
@@ -33,7 +40,10 @@
         <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<img id ="Aatrox" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id ="Aatrox" draggable="true" ondragstart="drag(event)" src="Champions/AatroxSquare.png" alt="">
+        </div>
+
 <img id ="Ahri" draggable="true" ondragstart="drag(event)" src="Champions/AhriSquare.png" alt="">
 <img id ="Akali" draggable="true" ondragstart="drag(event)" src="Champions/AkaliSquare.png" alt="">
 <img id ="1" draggable="true" ondragstart="drag(event)" src="Champions/AlistarSquare.png" alt="">
