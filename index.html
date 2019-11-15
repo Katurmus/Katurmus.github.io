@@ -103,7 +103,7 @@
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
-              nodeCopy.id = x;
+              nodeCopy.id = "potato"+x;
               ev.target.appendChild(nodeCopy);
             }
 
