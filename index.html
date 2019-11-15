@@ -98,12 +98,16 @@
               ev.dataTransfer.setData("text", ev.target.id);
             }
             var x = 1000;
+            function deletg(ida){
+              document.getElementById(ida).style.display='none';
+            }
             function drop(ev) {
               x = x+1;
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
+              nodeCopy.ondragsstart = deletg(nodeCopy.id);
               ev.target.appendChild(nodeCopy);
             }
 
