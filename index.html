@@ -99,7 +99,7 @@
             }
             function drag2(ev){
               //alert("drag2");
-              document.getElementById(ida).style.display='none';
+              document.getElementById(ev.target.id).style.display='none';
               
             }
             function drop2(){
@@ -115,7 +115,7 @@
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
-              nodeCopy.ondragstart = drag2;
+              nodeCopy.ondragstart = drag2(event);
               ev.target.appendChild(nodeCopy);
             }
 
