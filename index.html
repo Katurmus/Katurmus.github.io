@@ -97,6 +97,9 @@
             function drag(ev) {
               ev.dataTransfer.setData("text", ev.target.id);
             }
+            function drag2(ev){
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
             var x = 1000;
             function deletg(ida){
               document.getElementById(ida).style.display='none';
@@ -107,8 +110,8 @@
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
+              nodeCopy.ondragstart = drag2(event);
               ev.target.appendChild(nodeCopy);
-              nodeCopy.ondragsstart = deletg(nodeCopy.id);
             }
 
     </script>
