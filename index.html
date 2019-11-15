@@ -115,7 +115,7 @@
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
-              nodeCopy.ondragstart = "drag2()";
+              nodeCopy.addEventListener('ondragstart', function(){drag2()},false);
               ev.target.appendChild(nodeCopy);
             }
 
