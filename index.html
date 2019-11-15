@@ -110,7 +110,7 @@
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
-              //nodeCopy.ondragstart = drag2(event);
+              nodeCopy.ondragstart = drag2(event);
               ev.target.appendChild(nodeCopy);
             }
 
