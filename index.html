@@ -104,11 +104,10 @@
             function drop2(ev){
               var nodeCopy = document.getElementById(ev);
               nodeCopy.ondragstart = drag2(ev);
+              alert("drop");
             }
+
             var x = 1000;
-            function deletg(ida){
-              document.getElementById(ida).style.display='none';
-            }
             function drop(ev) {
               x = x+1;
               ev.preventDefault();
