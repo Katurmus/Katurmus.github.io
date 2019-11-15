@@ -98,8 +98,8 @@
               ev.dataTransfer.setData("text", ev.target.id);
             }
             function drag2(ev){
-              alert("drag2");
-              //document.getElementById(ida).style.display='none';
+              //alert("drag2");
+              document.getElementById(ida).style.display='none';
               
             }
             function drop2(){
@@ -116,8 +116,6 @@
               var nodeCopy = document.getElementById(data).cloneNode(true);
               nodeCopy.id = "potato"+x;
               nodeCopy.ondragstart = drag2;
-              //nodeCopy.removeEventListener('ondragstart',drag);
-              //nodeCopy.addEventListener('ondragstart', drag2);
               ev.target.appendChild(nodeCopy);
             }
 
