@@ -102,7 +102,9 @@
             
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
-              ev.target.clone().appendChild(document.getElementById(data));
+              var nodeCopy = document.getElementById(data).cloneNode(true);
+              nodeCopy.id = "newId";
+              ev.target.appendChild(nodeCopy);
             }
 
     </script>
@@ -127,7 +129,7 @@
         <tr><td><img id ="3" draggable="true" ondragstart="drag(event)" src="Champions/AniviaSquare.png" alt="Anivia"></td></tr>
         <tr><td><img id ="4" draggable="true" ondragstart="drag(event)" src="Champions/AnnieSquare.png" alt="Annie"></td></tr>
         <tr><td><img id ="5" draggable="true" ondragstart="drag(event)" src="Champions/AsheSquare.png" alt="Ashe"></td></tr>
-        <tr><td><img id ="6" draggable="true" ondragstart="drag(event)" src="Champions/AurelionSquare.png" alt="Aurelion"></td></tr>
+        <tr><td><img id ="6" draggable="true" ondragstart="drag(event)" src="Champions/Aurelion_SolSquare.png" alt="Aurelion_Sol"></td></tr>
         <tr><td><img id ="7" draggable="true" ondragstart="drag(event)" src="Champions/AzirSquare.png" alt="Azir"></td></tr>
         <tr><td><img id ="8" draggable="true" ondragstart="drag(event)" src="Champions/BardSquare.png" alt="Bard"></td></tr>
         <tr><td><img id ="9" draggable="true" ondragstart="drag(event)" src="Champions/BlitzcrankSquare.png" alt="Blitzcrank"></td></tr>
