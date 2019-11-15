@@ -111,6 +111,7 @@
             var x = 1000;
             function drop(ev) {
               x = x+1;
+              
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
