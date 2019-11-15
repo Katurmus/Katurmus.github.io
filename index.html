@@ -97,13 +97,13 @@
             function drag(ev) {
               ev.dataTransfer.setData("text", ev.target.id);
             }
-            
+            var x = 1000;
             function drop(ev) {
-            
+              x = x+1
               ev.preventDefault();
               var data = ev.dataTransfer.getData("text");
               var nodeCopy = document.getElementById(data).cloneNode(true);
-              nodeCopy.id = "newId";
+              nodeCopy.id = x;
               ev.target.appendChild(nodeCopy);
             }
 
