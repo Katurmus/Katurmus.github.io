@@ -73,25 +73,19 @@
     </style>
     <script>
             function search() {
-              // Declare variables
-              var input, filter, table, tr, td, i, txtValue;
+              var input, filter, ul, li, a, i, txtValue;
               input = document.getElementById("myInput");
               filter = input.value.toUpperCase();
-              table = document.getElementById("champions");
-              tr = table.getElementsByTagName("tr");
-
-              // Loop through all table rows, and hide those who don't match the search query
-              for (i = 0; i < tr.length; i++) {
-                td = td = tr[i].getElementsByTagName("td")[0].getElementsByTagName("img")[0].getAttribute("alt");
-                if (td) {
-                  //alert(td);
-                  txtValue = td;
+              ul = document.getElementById("myUl");
+              li = ul.getElementsByTagName("li");
+              for (i = 0; i < li.length; i++) {
+                  a = li[i].getElementsByTagName("img")[0].getAttribute("alt");
+                  txtValue = a.textContent || a.innerText;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
+                      li[i].style.display = "";
                   } else {
-                    tr[i].style.display = "none";
+                      li[i].style.display = "none";
                   }
-                }
               }
             }
             function allowDrop(ev) {
